@@ -77,8 +77,8 @@ namespace Pantalla_Sistema_Facturacion
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            frmLogin ventana = new frmLogin();
-            ventana.Show();
+            frmLogin login = new frmLogin();
+            login.Show();
             this.Hide();
         }
 

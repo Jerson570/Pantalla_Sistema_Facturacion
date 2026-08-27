@@ -13,6 +13,17 @@ namespace Pantalla_Sistema_Facturacion
         public frmAyuda()
         {
             InitializeComponent();
+            WebBrowser navegador = new WebBrowser();
+            navegador.Dock = DockStyle.Fill;
+            navegador.ScriptErrorsSuppressed = true;
+            this.Controls.Add(navegador);
+
+            navegador.Navigate("https://github.com/Jerson570/Pantalla_Sistema_Facturacion");
+        }
+
+        private void frmAyuda_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

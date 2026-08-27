@@ -38,6 +38,7 @@
             Name = "frmAyuda";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmAyuda";
+            Load += frmAyuda_Load;
             ResumeLayout(false);
         }
 

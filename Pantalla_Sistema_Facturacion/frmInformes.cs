@@ -21,5 +21,34 @@ namespace Pantalla_Sistema_Facturacion
             principal.Show();
             this.Hide();
         }
+
+        private void btnGenerarInforme_Click(object sender, EventArgs e)
+        {
+            if (cmbInforme.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, seleccione un tipo de informe.");
+                return;
+            }
+            if (cmbOrdenarInforme.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, seleccione un criterio de ordenamiento.");
+                return;
+            }
+            if (dtInicioInforme.Value > dtFinalInforme.Value)
+            {
+                MessageBox.Show("La fecha de inicio no puede ser mayor que la fecha de fin.");
+                return;
+            }
+            if (rbtnPdf.Checked == false && rbtnExcel.Checked == false)
+            {
+                MessageBox.Show("Por favor, seleccione un formato de informe.");
+                return;
+            }
+            else
+            {
+
+                MessageBox.Show("Informe generado correctamente.");
+            }
+        }
     }
 }

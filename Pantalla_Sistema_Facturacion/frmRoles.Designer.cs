@@ -55,7 +55,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(236, 20);
+            label1.Location = new Point(208, 20);
             label1.Name = "label1";
             label1.Size = new Size(214, 27);
             label1.TabIndex = 1;
@@ -113,6 +113,7 @@
             btnActualizarRoles.TabIndex = 26;
             btnActualizarRoles.Text = "Actualizar";
             btnActualizarRoles.UseVisualStyleBackColor = false;
+            btnActualizarRoles.Click += btnActualizarRoles_Click;
             // 
             // frmRoles
             // 

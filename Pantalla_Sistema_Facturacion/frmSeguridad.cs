@@ -21,5 +21,24 @@ namespace Pantalla_Sistema_Facturacion
             frmPrincipal.Show();
             this.Hide();
         }
+
+        private void btnActualizarSeguridad_Click(object sender, EventArgs e)
+        {
+            if (cmbEmpleado.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un empleado para actualizar la seguridad.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(txtUsuarioSeguridad.Text) || string.IsNullOrEmpty(txtContraseñaSeguridad.Text))
+            {
+                MessageBox.Show("Por favor, complete todos los campos requeridos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+
+                MessageBox.Show("Seguridad actualizada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

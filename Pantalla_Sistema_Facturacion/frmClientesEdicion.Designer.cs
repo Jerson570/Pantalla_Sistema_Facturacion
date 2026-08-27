@@ -138,6 +138,7 @@
             btnActualizarCliente.TabIndex = 7;
             btnActualizarCliente.Text = "Actualizar";
             btnActualizarCliente.UseVisualStyleBackColor = false;
+            btnActualizarCliente.Click += btnActualizarCliente_Click;
             // 
             // btnSalirRegistro
             // 

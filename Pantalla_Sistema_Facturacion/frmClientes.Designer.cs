@@ -30,6 +30,8 @@
         {
             btnRegresarClientes = new Button();
             panel1 = new Panel();
+            label2 = new Label();
+            pictureBox1 = new PictureBox();
             txtBuscar = new TextBox();
             btnBuscarCliente = new Button();
             dataGridView1 = new DataGridView();
@@ -37,11 +39,9 @@
             btnEditar = new Button();
             btnEliminar = new Button();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
-            label2 = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // btnRegresarClientes
@@ -67,6 +67,28 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(550, 58);
             panel1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.Control;
+            label2.Location = new Point(229, 15);
+            label2.Name = "label2";
+            label2.Size = new Size(103, 27);
+            label2.TabIndex = 9;
+            label2.Text = "Clientes";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.logo;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Dock = DockStyle.Left;
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(98, 58);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // txtBuscar
             // 
@@ -113,6 +135,7 @@
             btnEditar.TabIndex = 7;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnEliminar
             // 
@@ -132,28 +155,6 @@
             label1.Size = new Size(64, 19);
             label1.TabIndex = 8;
             label1.Text = "Buscar";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.logo;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Dock = DockStyle.Left;
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(98, 58);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(229, 15);
-            label2.Name = "label2";
-            label2.Size = new Size(103, 27);
-            label2.TabIndex = 9;
-            label2.Text = "Clientes";
             // 
             // frmClientes
             // 
@@ -175,8 +176,8 @@
             Text = "frmClientes";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

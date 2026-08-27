@@ -116,7 +116,6 @@ namespace Pantalla_Sistema_Facturacion
         {
             frmClientes ventana = new frmClientes();
             ventana.Show();
-            this.Hide();
         }
 
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)

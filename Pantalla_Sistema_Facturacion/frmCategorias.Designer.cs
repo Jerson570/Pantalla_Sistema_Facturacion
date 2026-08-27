@@ -34,6 +34,7 @@
             txtNombreCategoria = new TextBox();
             btnActualizarCategoria = new Button();
             btnSalirCategoria = new Button();
+            label2 = new Label();
             flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -88,6 +89,7 @@
             btnActualizarCategoria.TabIndex = 2;
             btnActualizarCategoria.Text = "Actualizar";
             btnActualizarCategoria.UseVisualStyleBackColor = true;
+            btnActualizarCategoria.Click += btnActualizarCategoria_Click;
             // 
             // btnSalirCategoria
             // 
@@ -99,11 +101,22 @@
             btnSalirCategoria.UseVisualStyleBackColor = true;
             btnSalirCategoria.Click += btnSalir_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(210, 142);
+            label2.Name = "label2";
+            label2.Size = new Size(147, 18);
+            label2.TabIndex = 4;
+            label2.Text = "Nombre Categoria";
+            // 
             // frmCategorias
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(600, 450);
+            Controls.Add(label2);
             Controls.Add(btnSalirCategoria);
             Controls.Add(btnActualizarCategoria);
             Controls.Add(txtNombreCategoria);
@@ -127,5 +140,6 @@
         private TextBox txtNombreCategoria;
         private Button btnActualizarCategoria;
         private Button btnSalirCategoria;
+        private Label label2;
     }
 }

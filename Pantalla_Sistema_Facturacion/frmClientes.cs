@@ -27,5 +27,11 @@ namespace Pantalla_Sistema_Facturacion
             principal.Show();
             this.Hide();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            frmClientesEdicion formEdicion = new frmClientesEdicion();
+            formEdicion.ShowDialog();
+        }
     }
 }

@@ -25,5 +25,10 @@ namespace Pantalla_Sistema_Facturacion
         {
             Application.Exit(); // Cierra toda la aplicación
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

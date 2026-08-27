@@ -39,10 +39,10 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             label3 = new Label();
-            cmbEmpleados = new ComboBox();
-            dateTimePicker1 = new DateTimePicker();
+            cmbRolEmpleados = new ComboBox();
+            dtIngresoEmpleado = new DateTimePicker();
             label5 = new Label();
-            dateTimePicker2 = new DateTimePicker();
+            dtSalidaEmpleado = new DateTimePicker();
             label2 = new Label();
             txtDetallesEmpleado = new TextBox();
             panel1.SuspendLayout();
@@ -69,6 +69,7 @@
             btnActualizarEmpleado.TabIndex = 14;
             btnActualizarEmpleado.Text = "Actualizar";
             btnActualizarEmpleado.UseVisualStyleBackColor = false;
+            btnActualizarEmpleado.Click += btnActualizarEmpleado_Click;
             // 
             // txtEmailEmpleado
             // 
@@ -168,24 +169,24 @@
             label3.TabIndex = 18;
             label3.Text = "Rol Empleado";
             // 
-            // cmbEmpleados
+            // cmbRolEmpleados
             // 
-            cmbEmpleados.BackColor = SystemColors.Control;
-            cmbEmpleados.FormattingEnabled = true;
-            cmbEmpleados.Location = new Point(153, 103);
-            cmbEmpleados.Name = "cmbEmpleados";
-            cmbEmpleados.Size = new Size(169, 28);
-            cmbEmpleados.TabIndex = 17;
+            cmbRolEmpleados.BackColor = SystemColors.Control;
+            cmbRolEmpleados.FormattingEnabled = true;
+            cmbRolEmpleados.Location = new Point(153, 103);
+            cmbRolEmpleados.Name = "cmbRolEmpleados";
+            cmbRolEmpleados.Size = new Size(169, 28);
+            cmbRolEmpleados.TabIndex = 17;
             // 
-            // dateTimePicker1
+            // dtIngresoEmpleado
             // 
-            dateTimePicker1.CalendarMonthBackground = SystemColors.Control;
-            dateTimePicker1.DropDownAlign = LeftRightAlignment.Right;
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(607, 98);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(124, 27);
-            dateTimePicker1.TabIndex = 20;
+            dtIngresoEmpleado.CalendarMonthBackground = SystemColors.Control;
+            dtIngresoEmpleado.DropDownAlign = LeftRightAlignment.Right;
+            dtIngresoEmpleado.Format = DateTimePickerFormat.Short;
+            dtIngresoEmpleado.Location = new Point(607, 98);
+            dtIngresoEmpleado.Name = "dtIngresoEmpleado";
+            dtIngresoEmpleado.Size = new Size(124, 27);
+            dtIngresoEmpleado.TabIndex = 20;
             // 
             // label5
             // 
@@ -197,15 +198,15 @@
             label5.TabIndex = 19;
             label5.Text = "Fecha Ingreso";
             // 
-            // dateTimePicker2
+            // dtSalidaEmpleado
             // 
-            dateTimePicker2.CalendarMonthBackground = SystemColors.Control;
-            dateTimePicker2.DropDownAlign = LeftRightAlignment.Right;
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(607, 140);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(124, 27);
-            dateTimePicker2.TabIndex = 22;
+            dtSalidaEmpleado.CalendarMonthBackground = SystemColors.Control;
+            dtSalidaEmpleado.DropDownAlign = LeftRightAlignment.Right;
+            dtSalidaEmpleado.Format = DateTimePickerFormat.Short;
+            dtSalidaEmpleado.Location = new Point(607, 140);
+            dtSalidaEmpleado.Name = "dtSalidaEmpleado";
+            dtSalidaEmpleado.Size = new Size(124, 27);
+            dtSalidaEmpleado.TabIndex = 22;
             // 
             // label2
             // 
@@ -233,12 +234,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(txtDetallesEmpleado);
-            Controls.Add(dateTimePicker2);
+            Controls.Add(dtSalidaEmpleado);
             Controls.Add(label2);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtIngresoEmpleado);
             Controls.Add(label5);
             Controls.Add(label3);
-            Controls.Add(cmbEmpleados);
+            Controls.Add(cmbRolEmpleados);
             Controls.Add(panel1);
             Controls.Add(btnSalirEmpleado);
             Controls.Add(btnActualizarEmpleado);
@@ -272,10 +273,10 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Label label3;
-        private ComboBox cmbEmpleados;
-        private DateTimePicker dateTimePicker1;
+        private ComboBox cmbRolEmpleados;
+        private DateTimePicker dtIngresoEmpleado;
         private Label label5;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dtSalidaEmpleado;
         private Label label2;
         private TextBox txtDetallesEmpleado;
     }

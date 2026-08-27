@@ -32,12 +32,12 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             label2 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            cmbInforme = new ComboBox();
+            cmbOrdenarInforme = new ComboBox();
             label3 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dtInicioInforme = new DateTimePicker();
             label5 = new Label();
-            dateTimePicker2 = new DateTimePicker();
+            dtFinalInforme = new DateTimePicker();
             label4 = new Label();
             rbtnPdf = new RadioButton();
             rbtnExcel = new RadioButton();
@@ -90,23 +90,23 @@
             label2.TabIndex = 2;
             label2.Text = "Seleccione Informe";
             // 
-            // comboBox1
+            // cmbInforme
             // 
-            comboBox1.BackColor = SystemColors.Control;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(184, 123);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(209, 28);
-            comboBox1.TabIndex = 3;
+            cmbInforme.BackColor = SystemColors.Control;
+            cmbInforme.FormattingEnabled = true;
+            cmbInforme.Location = new Point(184, 123);
+            cmbInforme.Name = "cmbInforme";
+            cmbInforme.Size = new Size(209, 28);
+            cmbInforme.TabIndex = 3;
             // 
-            // comboBox2
+            // cmbOrdenarInforme
             // 
-            comboBox2.BackColor = SystemColors.Control;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(563, 123);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(148, 28);
-            comboBox2.TabIndex = 5;
+            cmbOrdenarInforme.BackColor = SystemColors.Control;
+            cmbOrdenarInforme.FormattingEnabled = true;
+            cmbOrdenarInforme.Location = new Point(563, 123);
+            cmbOrdenarInforme.Name = "cmbOrdenarInforme";
+            cmbOrdenarInforme.Size = new Size(148, 28);
+            cmbOrdenarInforme.TabIndex = 5;
             // 
             // label3
             // 
@@ -118,15 +118,15 @@
             label3.TabIndex = 4;
             label3.Text = "Ordenar por";
             // 
-            // dateTimePicker1
+            // dtInicioInforme
             // 
-            dateTimePicker1.CalendarMonthBackground = SystemColors.Control;
-            dateTimePicker1.DropDownAlign = LeftRightAlignment.Right;
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(211, 207);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(124, 27);
-            dateTimePicker1.TabIndex = 12;
+            dtInicioInforme.CalendarMonthBackground = SystemColors.Control;
+            dtInicioInforme.DropDownAlign = LeftRightAlignment.Right;
+            dtInicioInforme.Format = DateTimePickerFormat.Short;
+            dtInicioInforme.Location = new Point(211, 207);
+            dtInicioInforme.Name = "dtInicioInforme";
+            dtInicioInforme.Size = new Size(124, 27);
+            dtInicioInforme.TabIndex = 12;
             // 
             // label5
             // 
@@ -138,15 +138,15 @@
             label5.TabIndex = 11;
             label5.Text = "Fecha inicio";
             // 
-            // dateTimePicker2
+            // dtFinalInforme
             // 
-            dateTimePicker2.CalendarMonthBackground = SystemColors.Control;
-            dateTimePicker2.DropDownAlign = LeftRightAlignment.Right;
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(524, 207);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(124, 27);
-            dateTimePicker2.TabIndex = 14;
+            dtFinalInforme.CalendarMonthBackground = SystemColors.Control;
+            dtFinalInforme.DropDownAlign = LeftRightAlignment.Right;
+            dtFinalInforme.Format = DateTimePickerFormat.Short;
+            dtFinalInforme.Location = new Point(524, 207);
+            dtFinalInforme.Name = "dtFinalInforme";
+            dtFinalInforme.Size = new Size(124, 27);
+            dtFinalInforme.TabIndex = 14;
             // 
             // label4
             // 
@@ -198,6 +198,7 @@
             btnGenerarInforme.TabIndex = 16;
             btnGenerarInforme.Text = "Generar Informe";
             btnGenerarInforme.UseVisualStyleBackColor = true;
+            btnGenerarInforme.Click += btnGenerarInforme_Click;
             // 
             // frmInformes
             // 
@@ -208,13 +209,13 @@
             Controls.Add(btnGenerarInforme);
             Controls.Add(rbtnExcel);
             Controls.Add(rbtnPdf);
-            Controls.Add(dateTimePicker2);
+            Controls.Add(dtFinalInforme);
             Controls.Add(label4);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtInicioInforme);
             Controls.Add(label5);
-            Controls.Add(comboBox2);
+            Controls.Add(cmbOrdenarInforme);
             Controls.Add(label3);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbInforme);
             Controls.Add(label2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -234,12 +235,12 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Label label2;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox cmbInforme;
+        private ComboBox cmbOrdenarInforme;
         private Label label3;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtInicioInforme;
         private Label label5;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dtFinalInforme;
         private Label label4;
         private RadioButton rbtnPdf;
         private RadioButton rbtnExcel;

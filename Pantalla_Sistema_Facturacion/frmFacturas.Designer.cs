@@ -41,7 +41,7 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dtFacturas = new DateTimePicker();
             txtDetallesFactura = new TextBox();
             btnSalirFacturas = new Button();
             btnActualizarFacturas = new Button();
@@ -175,15 +175,15 @@
             label5.TabIndex = 7;
             label5.Text = "Fecha";
             // 
-            // dateTimePicker1
+            // dtFacturas
             // 
-            dateTimePicker1.CalendarMonthBackground = SystemColors.Control;
-            dateTimePicker1.DropDownAlign = LeftRightAlignment.Right;
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(521, 117);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(124, 27);
-            dateTimePicker1.TabIndex = 10;
+            dtFacturas.CalendarMonthBackground = SystemColors.Control;
+            dtFacturas.DropDownAlign = LeftRightAlignment.Right;
+            dtFacturas.Format = DateTimePickerFormat.Short;
+            dtFacturas.Location = new Point(521, 117);
+            dtFacturas.Name = "dtFacturas";
+            dtFacturas.Size = new Size(124, 27);
+            dtFacturas.TabIndex = 10;
             // 
             // txtDetallesFactura
             // 
@@ -213,6 +213,7 @@
             btnActualizarFacturas.TabIndex = 13;
             btnActualizarFacturas.Text = "Actualizar";
             btnActualizarFacturas.UseVisualStyleBackColor = true;
+            btnActualizarFacturas.Click += btnActualizarFacturas_Click;
             // 
             // frmFacturas
             // 
@@ -222,7 +223,7 @@
             Controls.Add(btnSalirFacturas);
             Controls.Add(btnActualizarFacturas);
             Controls.Add(txtDetallesFactura);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtFacturas);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label5);
@@ -260,7 +261,7 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtFacturas;
         private TextBox txtDetallesFactura;
         private Button btnSalirFacturas;
         private Button btnActualizarFacturas;

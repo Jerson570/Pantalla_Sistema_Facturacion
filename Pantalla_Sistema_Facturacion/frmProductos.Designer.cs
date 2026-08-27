@@ -32,14 +32,12 @@
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             txtNombreProducto = new TextBox();
-            txtCodigo = new TextBox();
+            txtCodigoReferenciaProducto = new TextBox();
             txtPrecioCompra = new TextBox();
             txtPrecioVenta = new TextBox();
             txtStock = new TextBox();
             btnActualizarProductos = new Button();
             btnSalirProductos = new Button();
-            cmbCategoriaProductos = new ComboBox();
-            label2 = new Label();
             txtDetallesProductos = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -87,14 +85,14 @@
             txtNombreProducto.Size = new Size(249, 27);
             txtNombreProducto.TabIndex = 2;
             // 
-            // txtCodigo
+            // txtCodigoReferenciaProducto
             // 
-            txtCodigo.BackColor = SystemColors.Control;
-            txtCodigo.Location = new Point(27, 157);
-            txtCodigo.Name = "txtCodigo";
-            txtCodigo.PlaceholderText = "Codigo Referencia";
-            txtCodigo.Size = new Size(249, 27);
-            txtCodigo.TabIndex = 3;
+            txtCodigoReferenciaProducto.BackColor = SystemColors.Control;
+            txtCodigoReferenciaProducto.Location = new Point(27, 157);
+            txtCodigoReferenciaProducto.Name = "txtCodigoReferenciaProducto";
+            txtCodigoReferenciaProducto.PlaceholderText = "Codigo Referencia";
+            txtCodigoReferenciaProducto.Size = new Size(249, 27);
+            txtCodigoReferenciaProducto.TabIndex = 3;
             // 
             // txtPrecioCompra
             // 
@@ -131,6 +129,7 @@
             btnActualizarProductos.TabIndex = 7;
             btnActualizarProductos.Text = "Actualizar";
             btnActualizarProductos.UseVisualStyleBackColor = true;
+            btnActualizarProductos.Click += btnActualizarProductos_Click;
             // 
             // btnSalirProductos
             // 
@@ -142,34 +141,14 @@
             btnSalirProductos.UseVisualStyleBackColor = true;
             btnSalirProductos.Click += btnSalirProductos_Click;
             // 
-            // cmbCategoriaProductos
-            // 
-            cmbCategoriaProductos.BackColor = SystemColors.Control;
-            cmbCategoriaProductos.FormattingEnabled = true;
-            cmbCategoriaProductos.Location = new Point(531, 115);
-            cmbCategoriaProductos.Name = "cmbCategoriaProductos";
-            cmbCategoriaProductos.Size = new Size(176, 28);
-            cmbCategoriaProductos.TabIndex = 9;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.FlatStyle = FlatStyle.Popup;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(452, 119);
-            label2.Name = "label2";
-            label2.Size = new Size(76, 20);
-            label2.TabIndex = 10;
-            label2.Text = "Categoria";
-            // 
             // txtDetallesProductos
             // 
             txtDetallesProductos.BackColor = SystemColors.Control;
-            txtDetallesProductos.Location = new Point(452, 198);
+            txtDetallesProductos.Location = new Point(402, 120);
             txtDetallesProductos.Multiline = true;
             txtDetallesProductos.Name = "txtDetallesProductos";
             txtDetallesProductos.PlaceholderText = "Detalles";
-            txtDetallesProductos.Size = new Size(249, 117);
+            txtDetallesProductos.Size = new Size(321, 173);
             txtDetallesProductos.TabIndex = 11;
             // 
             // frmProductos
@@ -178,14 +157,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(txtDetallesProductos);
-            Controls.Add(label2);
-            Controls.Add(cmbCategoriaProductos);
             Controls.Add(btnSalirProductos);
             Controls.Add(btnActualizarProductos);
             Controls.Add(txtStock);
             Controls.Add(txtPrecioVenta);
             Controls.Add(txtPrecioCompra);
-            Controls.Add(txtCodigo);
+            Controls.Add(txtCodigoReferenciaProducto);
             Controls.Add(txtNombreProducto);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -205,14 +182,12 @@
         private Panel panel1;
         private PictureBox pictureBox1;
         private TextBox txtNombreProducto;
-        private TextBox txtCodigo;
+        private TextBox txtCodigoReferenciaProducto;
         private TextBox txtPrecioCompra;
         private TextBox txtPrecioVenta;
         private TextBox txtStock;
         private Button btnActualizarProductos;
         private Button btnSalirProductos;
-        private ComboBox cmbCategoriaProductos;
-        private Label label2;
         private TextBox txtDetallesProductos;
     }
 }

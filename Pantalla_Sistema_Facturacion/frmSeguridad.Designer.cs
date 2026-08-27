@@ -130,6 +130,7 @@
             btnActualizarSeguridad.TabIndex = 15;
             btnActualizarSeguridad.Text = "Actualizar";
             btnActualizarSeguridad.UseVisualStyleBackColor = true;
+            btnActualizarSeguridad.Click += btnActualizarSeguridad_Click;
             // 
             // frmSeguridad
             // 

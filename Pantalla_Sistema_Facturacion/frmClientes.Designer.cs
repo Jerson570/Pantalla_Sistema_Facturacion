@@ -37,35 +37,35 @@
             btnEditar = new Button();
             btnEliminar = new Button();
             label1 = new Label();
+            pictureBox1 = new PictureBox();
+            label2 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnRegresarClientes
             // 
-            btnRegresarClientes.BackColor = SystemColors.Highlight;
-            btnRegresarClientes.BackgroundImageLayout = ImageLayout.Zoom;
-            btnRegresarClientes.Cursor = Cursors.Hand;
-            btnRegresarClientes.FlatAppearance.BorderSize = 0;
-            btnRegresarClientes.FlatStyle = FlatStyle.Flat;
-            btnRegresarClientes.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRegresarClientes.ForeColor = SystemColors.ButtonHighlight;
-            btnRegresarClientes.Location = new Point(0, 5);
+            btnRegresarClientes.BackColor = SystemColors.Window;
+            btnRegresarClientes.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRegresarClientes.ForeColor = SystemColors.ControlText;
+            btnRegresarClientes.Location = new Point(351, 477);
             btnRegresarClientes.Name = "btnRegresarClientes";
-            btnRegresarClientes.Size = new Size(111, 45);
+            btnRegresarClientes.Size = new Size(122, 41);
             btnRegresarClientes.TabIndex = 0;
-            btnRegresarClientes.Text = "Regresar";
+            btnRegresarClientes.Text = "Salir";
             btnRegresarClientes.UseVisualStyleBackColor = false;
             btnRegresarClientes.Click += btnRegresarClientes_Click;
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.Highlight;
-            panel1.Controls.Add(btnRegresarClientes);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(550, 57);
+            panel1.Size = new Size(550, 58);
             panel1.TabIndex = 1;
             // 
             // txtBuscar
@@ -97,9 +97,9 @@
             // 
             // btnNuevo
             // 
-            btnNuevo.Location = new Point(36, 426);
+            btnNuevo.Location = new Point(77, 420);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(126, 44);
+            btnNuevo.Size = new Size(122, 41);
             btnNuevo.TabIndex = 6;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = true;
@@ -107,18 +107,18 @@
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(203, 426);
+            btnEditar.Location = new Point(77, 477);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(126, 44);
+            btnEditar.Size = new Size(122, 41);
             btnEditar.TabIndex = 7;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(371, 426);
+            btnEliminar.Location = new Point(351, 420);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(126, 44);
+            btnEliminar.Size = new Size(122, 41);
             btnEliminar.TabIndex = 7;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
@@ -133,11 +133,34 @@
             label1.TabIndex = 8;
             label1.Text = "Buscar";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.logo;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Dock = DockStyle.Left;
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(98, 58);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.Control;
+            label2.Location = new Point(229, 15);
+            label2.Name = "label2";
+            label2.Size = new Size(103, 27);
+            label2.TabIndex = 9;
+            label2.Text = "Clientes";
+            // 
             // frmClientes
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(550, 550);
+            Controls.Add(btnRegresarClientes);
             Controls.Add(label1);
             Controls.Add(btnEliminar);
             Controls.Add(btnEditar);
@@ -151,7 +174,9 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmClientes";
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -167,5 +192,7 @@
         private Button btnEditar;
         private Button btnEliminar;
         private Label label1;
+        private Label label2;
+        private PictureBox pictureBox1;
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             flowLayoutPanel1 = new FlowLayoutPanel();
+            pictureBox1 = new PictureBox();
             label1 = new Label();
             txtNombreCliente = new TextBox();
             txtDocumentoCliente = new TextBox();
@@ -37,7 +38,6 @@
             txtEmailCliente = new TextBox();
             btnActualizarCliente = new Button();
             btnSalirRegistro = new Button();
-            pictureBox1 = new PictureBox();
             flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -52,12 +52,23 @@
             flowLayoutPanel1.Size = new Size(500, 56);
             flowLayoutPanel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.logo;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox1.Location = new Point(3, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(66, 53);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.DarkRed;
-            label1.Location = new Point(142, 85);
+            label1.Location = new Point(153, 79);
             label1.Name = "label1";
             label1.Size = new Size(180, 27);
             label1.TabIndex = 1;
@@ -139,30 +150,19 @@
             btnSalirRegistro.UseVisualStyleBackColor = false;
             btnSalirRegistro.Click += btnSalirRegistro_Click;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.logo;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(3, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(66, 53);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
             // frmClientesEdicion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(500, 650);
             Controls.Add(btnSalirRegistro);
+            Controls.Add(label1);
             Controls.Add(btnActualizarCliente);
             Controls.Add(txtEmailCliente);
             Controls.Add(txtTelefonoCliente);
             Controls.Add(txtDireccionCliente);
             Controls.Add(txtDocumentoCliente);
             Controls.Add(txtNombreCliente);
-            Controls.Add(label1);
             Controls.Add(flowLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmClientesEdicion";

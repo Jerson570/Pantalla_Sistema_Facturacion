@@ -14,5 +14,12 @@ namespace Pantalla_Sistema_Facturacion
         {
             InitializeComponent();
         }
+
+        private void btnSalirSeguridad_Click(object sender, EventArgs e)
+        {
+            frmPrincipal frmPrincipal = new frmPrincipal();
+            frmPrincipal.Show();
+            this.Hide();
+        }
     }
 }

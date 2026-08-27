@@ -38,9 +38,9 @@
             txtStock = new TextBox();
             btnActualizarProductos = new Button();
             btnSalirProductos = new Button();
-            comboBox1 = new ComboBox();
+            cmbCategoriaProductos = new ComboBox();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtDetallesProductos = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -48,9 +48,10 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(256, 16);
+            label1.Location = new Point(260, 16);
             label1.Name = "label1";
             label1.Size = new Size(291, 23);
             label1.TabIndex = 0;
@@ -141,14 +142,14 @@
             btnSalirProductos.UseVisualStyleBackColor = true;
             btnSalirProductos.Click += btnSalirProductos_Click;
             // 
-            // comboBox1
+            // cmbCategoriaProductos
             // 
-            comboBox1.BackColor = SystemColors.Control;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(531, 115);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(176, 28);
-            comboBox1.TabIndex = 9;
+            cmbCategoriaProductos.BackColor = SystemColors.Control;
+            cmbCategoriaProductos.FormattingEnabled = true;
+            cmbCategoriaProductos.Location = new Point(531, 115);
+            cmbCategoriaProductos.Name = "cmbCategoriaProductos";
+            cmbCategoriaProductos.Size = new Size(176, 28);
+            cmbCategoriaProductos.TabIndex = 9;
             // 
             // label2
             // 
@@ -161,24 +162,24 @@
             label2.TabIndex = 10;
             label2.Text = "Categoria";
             // 
-            // textBox1
+            // txtDetallesProductos
             // 
-            textBox1.BackColor = SystemColors.Control;
-            textBox1.Location = new Point(452, 198);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Detalles";
-            textBox1.Size = new Size(249, 117);
-            textBox1.TabIndex = 11;
+            txtDetallesProductos.BackColor = SystemColors.Control;
+            txtDetallesProductos.Location = new Point(452, 198);
+            txtDetallesProductos.Multiline = true;
+            txtDetallesProductos.Name = "txtDetallesProductos";
+            txtDetallesProductos.PlaceholderText = "Detalles";
+            txtDetallesProductos.Size = new Size(249, 117);
+            txtDetallesProductos.TabIndex = 11;
             // 
             // frmProductos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
+            Controls.Add(txtDetallesProductos);
             Controls.Add(label2);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbCategoriaProductos);
             Controls.Add(btnSalirProductos);
             Controls.Add(btnActualizarProductos);
             Controls.Add(txtStock);
@@ -210,8 +211,8 @@
         private TextBox txtStock;
         private Button btnActualizarProductos;
         private Button btnSalirProductos;
-        private ComboBox comboBox1;
+        private ComboBox cmbCategoriaProductos;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox txtDetallesProductos;
     }
 }

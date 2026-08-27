@@ -14,5 +14,18 @@ namespace Pantalla_Sistema_Facturacion
         {
             InitializeComponent();
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmClientesEdicion formEdicion = new frmClientesEdicion();
+            formEdicion.ShowDialog();
+        }
+
+        private void btnRegresarClientes_Click(object sender, EventArgs e)
+        {
+            frmPrincipal principal = new frmPrincipal();
+            principal.Show();
+            this.Hide();
+        }
     }
 }

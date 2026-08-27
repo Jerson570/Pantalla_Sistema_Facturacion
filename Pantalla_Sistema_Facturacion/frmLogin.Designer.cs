@@ -128,6 +128,7 @@
             Controls.Add(btnCancelar);
             Controls.Add(btnValidar);
             Name = "frmLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmLogin";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

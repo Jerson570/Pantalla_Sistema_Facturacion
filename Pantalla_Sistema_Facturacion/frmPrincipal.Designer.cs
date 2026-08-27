@@ -32,14 +32,31 @@
             btnSalir = new Button();
             label1 = new Label();
             pnlBarraSuperior = new Panel();
-            pictureBox1 = new PictureBox();
-            contextMenuStrip1 = new ContextMenuStrip(components);
+            btnAyuda = new Button();
+            btnSeguridad = new Button();
+            btnFacturacion = new Button();
+            btnMenuTablas = new Button();
+            cmsTablas = new ContextMenuStrip(components);
             clientesToolStripMenuItem = new ToolStripMenuItem();
             productosToolStripMenuItem = new ToolStripMenuItem();
             categoriasToolStripMenuItem = new ToolStripMenuItem();
+            pictureBox1 = new PictureBox();
+            cmsFacturacion = new ContextMenuStrip(components);
+            facturasToolStripMenuItem = new ToolStripMenuItem();
+            informesToolStripMenuItem = new ToolStripMenuItem();
+            cmsSeguridad = new ContextMenuStrip(components);
+            empleadosToolStripMenuItem = new ToolStripMenuItem();
+            rolesToolStripMenuItem = new ToolStripMenuItem();
+            seguToolStripMenuItem = new ToolStripMenuItem();
+            cmsAyuda = new ContextMenuStrip(components);
+            ayudaToolStripMenuItem = new ToolStripMenuItem();
+            acercaDeToolStripMenuItem = new ToolStripMenuItem();
             pnlBarraSuperior.SuspendLayout();
+            cmsTablas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            contextMenuStrip1.SuspendLayout();
+            cmsFacturacion.SuspendLayout();
+            cmsSeguridad.SuspendLayout();
+            cmsAyuda.SuspendLayout();
             SuspendLayout();
             // 
             // btnSalir
@@ -76,12 +93,97 @@
             // pnlBarraSuperior
             // 
             pnlBarraSuperior.BackColor = SystemColors.ControlDarkDark;
+            pnlBarraSuperior.Controls.Add(btnAyuda);
+            pnlBarraSuperior.Controls.Add(btnSeguridad);
+            pnlBarraSuperior.Controls.Add(btnFacturacion);
+            pnlBarraSuperior.Controls.Add(btnMenuTablas);
             pnlBarraSuperior.Controls.Add(label1);
             pnlBarraSuperior.Dock = DockStyle.Top;
             pnlBarraSuperior.Location = new Point(0, 0);
             pnlBarraSuperior.Name = "pnlBarraSuperior";
             pnlBarraSuperior.Size = new Size(800, 55);
             pnlBarraSuperior.TabIndex = 16;
+            // 
+            // btnAyuda
+            // 
+            btnAyuda.BackColor = SystemColors.ControlDarkDark;
+            btnAyuda.FlatAppearance.BorderSize = 0;
+            btnAyuda.FlatStyle = FlatStyle.Flat;
+            btnAyuda.Location = new Point(652, 7);
+            btnAyuda.Name = "btnAyuda";
+            btnAyuda.Size = new Size(129, 39);
+            btnAyuda.TabIndex = 20;
+            btnAyuda.Text = "Ayuda";
+            btnAyuda.UseVisualStyleBackColor = false;
+            btnAyuda.Click += btnAyuda_Click_1;
+            // 
+            // btnSeguridad
+            // 
+            btnSeguridad.BackColor = SystemColors.ControlDarkDark;
+            btnSeguridad.FlatAppearance.BorderSize = 0;
+            btnSeguridad.FlatStyle = FlatStyle.Flat;
+            btnSeguridad.Location = new Point(517, 7);
+            btnSeguridad.Name = "btnSeguridad";
+            btnSeguridad.Size = new Size(129, 39);
+            btnSeguridad.TabIndex = 19;
+            btnSeguridad.Text = "Seguridad";
+            btnSeguridad.UseVisualStyleBackColor = false;
+            btnSeguridad.Click += btnSeguridad_Click_1;
+            // 
+            // btnFacturacion
+            // 
+            btnFacturacion.BackColor = SystemColors.ControlDarkDark;
+            btnFacturacion.FlatAppearance.BorderSize = 0;
+            btnFacturacion.FlatStyle = FlatStyle.Flat;
+            btnFacturacion.Location = new Point(382, 7);
+            btnFacturacion.Name = "btnFacturacion";
+            btnFacturacion.Size = new Size(129, 39);
+            btnFacturacion.TabIndex = 18;
+            btnFacturacion.Text = "Facturacion";
+            btnFacturacion.UseVisualStyleBackColor = false;
+            btnFacturacion.Click += btnFacturacion_Click;
+            // 
+            // btnMenuTablas
+            // 
+            btnMenuTablas.BackColor = SystemColors.ControlDarkDark;
+            btnMenuTablas.ContextMenuStrip = cmsTablas;
+            btnMenuTablas.FlatAppearance.BorderSize = 0;
+            btnMenuTablas.FlatStyle = FlatStyle.Flat;
+            btnMenuTablas.Location = new Point(264, 7);
+            btnMenuTablas.Name = "btnMenuTablas";
+            btnMenuTablas.Size = new Size(129, 39);
+            btnMenuTablas.TabIndex = 17;
+            btnMenuTablas.Text = "Tablas";
+            btnMenuTablas.UseVisualStyleBackColor = false;
+            btnMenuTablas.Click += btnTablas_Click;
+            // 
+            // cmsTablas
+            // 
+            cmsTablas.ImageScalingSize = new Size(20, 20);
+            cmsTablas.Items.AddRange(new ToolStripItem[] { clientesToolStripMenuItem, productosToolStripMenuItem, categoriasToolStripMenuItem });
+            cmsTablas.Name = "cmsTablas";
+            cmsTablas.Size = new Size(150, 76);
+            // 
+            // clientesToolStripMenuItem
+            // 
+            clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            clientesToolStripMenuItem.Size = new Size(149, 24);
+            clientesToolStripMenuItem.Text = "Clientes";
+            clientesToolStripMenuItem.Click += clientesToolStripMenuItem_Click;
+            // 
+            // productosToolStripMenuItem
+            // 
+            productosToolStripMenuItem.Name = "productosToolStripMenuItem";
+            productosToolStripMenuItem.Size = new Size(149, 24);
+            productosToolStripMenuItem.Text = "Productos";
+            productosToolStripMenuItem.Click += productosToolStripMenuItem_Click;
+            // 
+            // categoriasToolStripMenuItem
+            // 
+            categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
+            categoriasToolStripMenuItem.Size = new Size(149, 24);
+            categoriasToolStripMenuItem.Text = "Categorias";
+            categoriasToolStripMenuItem.Click += categoriasToolStripMenuItem_Click;
             // 
             // pictureBox1
             // 
@@ -93,30 +195,75 @@
             pictureBox1.TabIndex = 15;
             pictureBox1.TabStop = false;
             // 
-            // contextMenuStrip1
+            // cmsFacturacion
             // 
-            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { clientesToolStripMenuItem, productosToolStripMenuItem, categoriasToolStripMenuItem });
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(150, 76);
+            cmsFacturacion.ImageScalingSize = new Size(20, 20);
+            cmsFacturacion.Items.AddRange(new ToolStripItem[] { facturasToolStripMenuItem, informesToolStripMenuItem });
+            cmsFacturacion.Name = "cmsFacturacion";
+            cmsFacturacion.Size = new Size(137, 52);
             // 
-            // clientesToolStripMenuItem
+            // facturasToolStripMenuItem
             // 
-            clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            clientesToolStripMenuItem.Size = new Size(149, 24);
-            clientesToolStripMenuItem.Text = "Clientes";
+            facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
+            facturasToolStripMenuItem.Size = new Size(136, 24);
+            facturasToolStripMenuItem.Text = "Facturas";
+            facturasToolStripMenuItem.Click += facturasToolStripMenuItem_Click;
             // 
-            // productosToolStripMenuItem
+            // informesToolStripMenuItem
             // 
-            productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            productosToolStripMenuItem.Size = new Size(149, 24);
-            productosToolStripMenuItem.Text = "Productos";
+            informesToolStripMenuItem.Name = "informesToolStripMenuItem";
+            informesToolStripMenuItem.Size = new Size(136, 24);
+            informesToolStripMenuItem.Text = "Informes";
+            informesToolStripMenuItem.Click += informesToolStripMenuItem_Click;
             // 
-            // categoriasToolStripMenuItem
+            // cmsSeguridad
             // 
-            categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            categoriasToolStripMenuItem.Size = new Size(149, 24);
-            categoriasToolStripMenuItem.Text = "Categorias";
+            cmsSeguridad.ImageScalingSize = new Size(20, 20);
+            cmsSeguridad.Items.AddRange(new ToolStripItem[] { empleadosToolStripMenuItem, rolesToolStripMenuItem, seguToolStripMenuItem });
+            cmsSeguridad.Name = "cmsSeguridad";
+            cmsSeguridad.Size = new Size(153, 76);
+            // 
+            // empleadosToolStripMenuItem
+            // 
+            empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
+            empleadosToolStripMenuItem.Size = new Size(152, 24);
+            empleadosToolStripMenuItem.Text = "Empleados";
+            empleadosToolStripMenuItem.Click += empleadosToolStripMenuItem_Click;
+            // 
+            // rolesToolStripMenuItem
+            // 
+            rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
+            rolesToolStripMenuItem.Size = new Size(152, 24);
+            rolesToolStripMenuItem.Text = "Roles";
+            rolesToolStripMenuItem.Click += rolesToolStripMenuItem_Click;
+            // 
+            // seguToolStripMenuItem
+            // 
+            seguToolStripMenuItem.Name = "seguToolStripMenuItem";
+            seguToolStripMenuItem.Size = new Size(152, 24);
+            seguToolStripMenuItem.Text = "Seguridad";
+            seguToolStripMenuItem.Click += seguToolStripMenuItem_Click;
+            // 
+            // cmsAyuda
+            // 
+            cmsAyuda.ImageScalingSize = new Size(20, 20);
+            cmsAyuda.Items.AddRange(new ToolStripItem[] { ayudaToolStripMenuItem, acercaDeToolStripMenuItem });
+            cmsAyuda.Name = "cmsAyuda";
+            cmsAyuda.Size = new Size(147, 52);
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            ayudaToolStripMenuItem.Size = new Size(146, 24);
+            ayudaToolStripMenuItem.Text = "Ayuda";
+            ayudaToolStripMenuItem.Click += ayudaToolStripMenuItem_Click;
+            // 
+            // acercaDeToolStripMenuItem
+            // 
+            acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            acercaDeToolStripMenuItem.Size = new Size(146, 24);
+            acercaDeToolStripMenuItem.Text = "Acerca De";
+            acercaDeToolStripMenuItem.Click += acercaDeToolStripMenuItem_Click;
             // 
             // frmPrincipal
             // 
@@ -126,13 +273,18 @@
             Controls.Add(pnlBarraSuperior);
             Controls.Add(btnSalir);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmPrincipal";
             Load += frmPrincipal_Load;
             pnlBarraSuperior.ResumeLayout(false);
             pnlBarraSuperior.PerformLayout();
+            cmsTablas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            contextMenuStrip1.ResumeLayout(false);
+            cmsFacturacion.ResumeLayout(false);
+            cmsSeguridad.ResumeLayout(false);
+            cmsAyuda.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -141,9 +293,23 @@
         private Label label1;
         private Panel pnlBarraSuperior;
         private PictureBox pictureBox1;
-        private ContextMenuStrip contextMenuStrip1;
+        private Button btnMenuTablas;
+        private Button btnAyuda;
+        private Button btnSeguridad;
+        private Button btnFacturacion;
+        private ContextMenuStrip cmsTablas;
         private ToolStripMenuItem clientesToolStripMenuItem;
         private ToolStripMenuItem productosToolStripMenuItem;
         private ToolStripMenuItem categoriasToolStripMenuItem;
+        private ContextMenuStrip cmsFacturacion;
+        private ToolStripMenuItem facturasToolStripMenuItem;
+        private ToolStripMenuItem informesToolStripMenuItem;
+        private ContextMenuStrip cmsSeguridad;
+        private ToolStripMenuItem empleadosToolStripMenuItem;
+        private ToolStripMenuItem rolesToolStripMenuItem;
+        private ContextMenuStrip cmsAyuda;
+        private ToolStripMenuItem ayudaToolStripMenuItem;
+        private ToolStripMenuItem acercaDeToolStripMenuItem;
+        private ToolStripMenuItem seguToolStripMenuItem;
     }
 }

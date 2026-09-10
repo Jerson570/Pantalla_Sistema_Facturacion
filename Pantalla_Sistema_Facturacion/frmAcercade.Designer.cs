@@ -43,7 +43,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(168, 140);
+            label1.Location = new Point(156, 146);
             label1.Name = "label1";
             label1.Size = new Size(190, 19);
             label1.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(118, 191);
+            label2.Location = new Point(106, 197);
             label2.Name = "label2";
             label2.Size = new Size(285, 19);
             label2.TabIndex = 0;
@@ -63,7 +63,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(104, 250);
+            label3.Location = new Point(92, 256);
             label3.Name = "label3";
             label3.Size = new Size(314, 19);
             label3.TabIndex = 0;
@@ -73,7 +73,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(218, 412);
+            label4.Location = new Point(202, 375);
             label4.Name = "label4";
             label4.Size = new Size(66, 19);
             label4.TabIndex = 0;
@@ -87,7 +87,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(532, 67);
+            panel1.Size = new Size(502, 67);
             panel1.TabIndex = 2;
             // 
             // label5
@@ -95,7 +95,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = SystemColors.Control;
-            label5.Location = new Point(202, 23);
+            label5.Location = new Point(192, 24);
             label5.Name = "label5";
             label5.Size = new Size(133, 27);
             label5.TabIndex = 1;
@@ -116,7 +116,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(532, 450);
+            ClientSize = new Size(502, 403);
             Controls.Add(panel1);
             Controls.Add(label4);
             Controls.Add(label3);
